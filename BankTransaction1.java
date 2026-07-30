@@ -1,7 +1,6 @@
 public class BankTransaction1 {
     public static void main(String[] args) {
 
-        // Pre-defined data
         int[] account = {101, 102, 103, 104};
         String[] type = {"Deposit", "Withdrawal", "Deposit", "Withdrawal"};
         double[] amount = {5000, 12000, 8000, 2000};
@@ -12,7 +11,7 @@ public class BankTransaction1 {
         double totalDeposit = 0;
         double totalWithdrawal = 0;
 
-        // Calculate balances
+
         for (int i = 0; i < n; i++) {
 
             if (type[i].equalsIgnoreCase("Deposit")) {
@@ -24,11 +23,9 @@ public class BankTransaction1 {
             }
         }
 
-        // Total deposits and withdrawals
         System.out.println("Total Deposits = $" + totalDeposit);
         System.out.println("Total Withdrawals = $" + totalWithdrawal);
 
-        // Highest balance
         double maxBalance = balance[0];
         int maxIndex = 0;
 
@@ -42,7 +39,6 @@ public class BankTransaction1 {
         System.out.println("\nAccount with Highest Balance: " + account[maxIndex]);
         System.out.println("Balance = $" + maxBalance);
 
-        // Suspicious withdrawals
         System.out.println("\nSuspicious Withdrawals (Greater than $10000):");
         for (int i = 0; i < n; i++) {
             if (type[i].equalsIgnoreCase("Withdrawal") && amount[i] > 10000) {
@@ -50,7 +46,6 @@ public class BankTransaction1 {
             }
         }
 
-        // Final balances
         System.out.println("\nFinal Balances:");
         for (int i = 0; i < n; i++) {
             System.out.println("Account " + account[i] + " : $" + balance[i]);
